@@ -25,7 +25,7 @@ function main() {
 
   console.log(`If you add ${firstOperand} and ${secondOperand} you get ${sum}`)
   console.log(
-    `If you subtract  ${secondOperand} from ${firstOperand} you get ${difference}`
+    `If you subtract ${secondOperand} from ${firstOperand} you get ${difference}`
   )
   console.log(
     `If you multiply ${firstOperand} and ${secondOperand} you get ${product}`
@@ -140,38 +140,41 @@ function main() {
     34534,
   ]
 
-  let smallest = numbers[0];
-  let arraySum = 0;
-  let largest = numbers[0];
-  for (var i = 0; i < numbers.length; i++){
+  let smallest = numbers[0]
+  let arraySum = 0
+  let largest = numbers[0]
+  for (var i = 0; i < numbers.length; i++) {
     arraySum += numbers[i]
-    if (numbers[i] >= largest){
+    if (numbers[i] >= largest) {
       largest = numbers[i]
     }
-    if (numbers[i <= smallest]){
+    if (numbers[i <= smallest]) {
       smallest = numbers[i]
     }
   }
-  let average = arraySum/numbers.length;
+  let average = arraySum / numbers.length
 
   let stats = {
-    smallest = smallest,
-    largest = largest,
-    sum = arraySum,
-    average = average,
+    smallest: smallest,
+    largest: largest,
+    sum: arraySum,
+    average: average,
   }
 
   // Adventure Mode
   let sumOfOdd = 0
   let countOfEven = 0
-  for (var i = 0; i < numbers.length; i++){
+  for (var i = 0; i < numbers.length; i++) {
     arraySum += numbers[i]
-    if (numbers[i] % 2 === 1){
-      sumOfOdd += numbers[i]    
+    if (numbers[i] % 2 === 1) {
+      sumOfOdd += numbers[i]
     } else {
       countOfEven += 1
     }
   }
+  // console.log(
+  //   `${stats.smallest}, ${stats.largest}, ${stats.sum}, ${stats.average}, sum of odd: ${sumOfOdd}, count of even: ${countOfEven}`
+  // )
 }
 
 document.addEventListener('DOMContentLoaded', main)
